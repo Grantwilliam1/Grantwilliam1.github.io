@@ -24,7 +24,11 @@ html {
   border-radius: 1.5em;
 }
 
-.card header, .card footer{
+.card h2, .card p{
+  margin: 0;
+}
+
+.card header, .card footer {
   height: 3em;
   padding: 1em;
 }
@@ -39,7 +43,27 @@ html {
   border-radius: 0 0 1.5em 1.5em;
 }
 
+.card header h2{
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+.card footer p{
+  font-size: 1.5em;
+  line-height: 2;
+}
+
+.card article{
+  height: 12em;
+  background-color: rgba(0,0,0,0.25);
+}
+
 .card article img{
   max-height: 100%;
   float: right;
+}
+
+.card article p {
+  padding: 1em;
+  color: rgba(255,255,255);
 }
