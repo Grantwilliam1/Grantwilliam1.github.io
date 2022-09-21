@@ -42,9 +42,19 @@ h1 {
 /* Your CSS below here */
 
 article{
-  background-image: url("/img/top-image.png"), url("/img/bottom-image.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: top center, bottom center;
+  background: top / contain
+              no-repeat
+              url("/img/top-image.png");
+  background: top / contain
+              no-repeat
+              url("/img/top-image.png"),
+              bottom / contain
+              no-repeat
+              url("/img/bottom-image.png"),
+              linear-gradient(rgba(0, 0, 0, 0.25) 0%,
+                              rgba(0, 0, 0, 0) 25%,
+                              rgba(0,0,0,0) 75%,
+                              rgba(0,0,0,0) 100%);
   background-color: #fff;
   border-top: 1mm solid red;
   border-bottom: 1mm solid red;
