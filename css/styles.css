@@ -19,14 +19,30 @@ h2 {
 
 h3 {
     font-size: 30pt;
+    color: #878e88;
 }
 
 h4 {
     font-size: 20pt;
     font-weight: normal;
+    color: #878e88;
 }
 
 p {
     font-size: 15pt;
     font-weight: lighter;
+    color: #878e88;
 }
+
+li{
+    font-size: 15pt;
+    font-weight: lighter;
+}
+
+/*hover and click state*/
+
+a:hover {
+    color: #D4DFC7;
+}
+
+a:active {color: #96C0B7}
