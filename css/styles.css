@@ -1,0 +1,32 @@
+html {
+    font-family: 'Helvetica Neue';
+    background-color: #FEF6C9;
+    color: #252E2A;
+}
+
+/*Font Information*/
+
+h1 {
+    font-size: 70pt;
+    font-weight: bolder;
+    border-bottom: 10px solid;
+}
+
+h2 {
+    font-size: 50pt;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 30pt;
+}
+
+h4 {
+    font-size: 20pt;
+    font-weight: normal;
+}
+
+p {
+    font-size: 15pt;
+    font-weight: lighter;
+}
