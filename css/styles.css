@@ -32,6 +32,7 @@ p {
     font-size: 15pt;
     font-weight: lighter;
     color: #878e88;
+    padding: 10px;
 }
 
 li{
@@ -39,34 +40,50 @@ li{
     font-weight: lighter;
 }
 
-/*hover and click state*/
-
-a:hover {
-    color: #D4DFC7;
-}
-
-a:active {color: #96C0B7}
-
 /*layout stuff*/
 
-nav {
+/*nav stuff*/
+
+.topnav {
     background-color: #878e88;
     padding: .5em;
     position: sticky;
     top: 0;
+    overflow: hidden;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+.topnav a:hover {
+    color: #96C0B7;
+    background-color: #D4DFC7;
+}
+
+.topnav a:active {
+    color: #D4DFC7;
+    background-color: #96c0b7
 }
 
 .feature {
-    width: 300px;
+    width: 100%;
     margin: 10px;
+    padding: 5px;
+}
+
+.feature2 {
+    width: 200px;
+    margin: 10px
+}
+
+img {
+    float: center;
 }
 
 /*media queries*/
@@ -75,19 +92,26 @@ nav ul {
     .grid {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        gap: 5px;
+        gap: 10px;
         width: 80%;
         margin: auto;
       }
-    .feature{
+    .feature and .feature2{
         display: block;
         margin-left: auto;
         margin-right: auto;
         max-width: 100%;
         min-width: 75%;
     }
+    .grid2 {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        gap: 5px;
+        width: 80%;
+        margin: auto
+    }
   }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
     .grid {
         display: grid;
         grid-template-rows: auto;
