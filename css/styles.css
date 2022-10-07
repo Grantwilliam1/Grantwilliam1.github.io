@@ -73,22 +73,33 @@ li{
 
 .feature {
     width: 100%;
-    margin: 10px;
-    padding: 5px;
+    margin: 5px;
+    padding: 1px;
 }
 
 .feature2 {
     width: 200px;
-    margin: 10px
+    margin: 10px;
+    float: center;
 }
 
 img {
     float: center;
 }
 
+.grid3{
+    grid-template-rows: auto;
+    display: grid;
+    margin: auto;
+    align-self: center;
+    height: 80%;
+}
+
+/*contact card information*/
+
 /*media queries*/
 
-@media only screen and (max-width: 1600px) and (min-width: 501px) {
+@media only screen and (max-width: 1600px) and (min-width: 1001px) {
     .grid {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -96,13 +107,6 @@ img {
         width: 80%;
         margin: auto;
       }
-    .feature and .feature2{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%;
-        min-width: 75%;
-    }
     .grid2 {
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr 1fr; 
@@ -110,16 +114,67 @@ img {
         width: 80%;
         margin: auto
     }
+    .grid3 p{
+        text-align: center;
+        color:  #f2f2f2;
+        width: 500px;
+        height: 50px;
+        margin: 5em auto;
+        background-color: #96C0B7;
+        border: 0.5em solid #D4DFC7;
+        border-radius: .5em;
+    }
+    .feature{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        min-width: 75%;
+    }
+    .feature2{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        min-width: 75%;
+    }
   }
-@media only screen and (max-width: 500px) {
-    .grid {
+@media only screen and (max-width: 1000px) {
+    .grid{
         display: grid;
         grid-template-rows: auto;
+        float: center;
         gap: 5px;
         height: 80%;
         margin: auto;
     }
-    .feature {
+    .grid2{
+        display: grid;
+        grid-template-rows: auto;
+        float: center;
+        gap: 5px;
+        height: 80%;
+        margin: auto;
+    }
+    .grid3 p{
+        text-align: center;
+        color:  #f2f2f2;
+        width: 400px;
+        height: 25px;
+        margin: 5em auto;
+        background-color: #96C0B7;
+        border: 0.5em solid #D4DFC7;
+        border-radius: .5em;
+    }
+    .feature{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        max-width: 75%;
+        min-width: 50%;
+    }
+    .feature2{
         display: block;
         margin-left: auto;
         margin-right: auto;
