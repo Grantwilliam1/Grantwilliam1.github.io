@@ -7,7 +7,6 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = "It was 100 fahrenheit outside, so Bob went watch the Super Mario Bros Movie to get out of the heat. When they got to the movies and got their 100 pound popcorn, they happened to sit next to :insertX: and the movie started. However, upon seeing the legendary performance of :insertY:, :insertX: had self destructed. Bob saw the whole thing, but was not surprised — it was :insertY:, and they were :insertZ:.";
 const storyText = "It was 100 fahrenheit outside, so Bob went watch the Super Mario Bros Movie to get out of the heat. When they got to the movies and got their 100 pound popcorn, they happened to sit next to :insertX: and the movie started. However, upon seeing the legendary performance of :insertY:, :insertX: had self destructed. Bob saw the whole thing, but was not surprised, it was :insertY:. They were :insertZ:!";
 const insertX = ["Barack Obama", "James Cordon", "Liam Neeson", "Nicholas Cage"];
 const insertY = ["Chris Pratt Mario", "Jack Black Bowser", "Seth Rogan Donkey Kong"];
