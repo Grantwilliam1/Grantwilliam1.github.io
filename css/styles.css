@@ -39,9 +39,6 @@ li{
     font-size: 15pt;
     font-weight: lighter;
 }
-
-/*layout stuff*/
-
 /*nav stuff*/
 
 .topnav {
@@ -98,8 +95,6 @@ img {
 .card{
     float: center;
 }
-
-/*contact card information*/
 
 /*media queries*/
 
