@@ -167,31 +167,3 @@ header {
   color: #D4DFC7;
   background-color: #96c0b7
 }
-
-.feature {
-  width: 100%;
-  margin: 5px;
-  padding: 1px;
-}
-
-.feature2 {
-  width: 200px;
-  margin: 10px;
-  float: center;
-}
-
-img {
-  float: center;
-}
-
-.grid3{
-  grid-template-rows: auto;
-  display: grid;
-  margin: auto;
-  align-self: center;
-  height: 80%;
-}
-
-.card{
-  float: center;
-}
