@@ -12,24 +12,52 @@
 <body>
     <div>
         <p>Please enter your phone number. </p>
-        <p class="output">0000000000</p>
-        <p class="output"></p>
+        <input type="text" name="number" id="number" class="text" placeholder="Enter your phone number"/>
     </div>
-    <form>
-        <!-- <input class="phone" type="text" id="phone" name="phone" placeholder="Enter a phone number"> -->
-        <input class="minus-button" type="button" name="submit-button" value="-">
-        <input class="plus-button" type="button" name="submit-button" value="+">
-        <input class="reset-button" type="button" name="submit-button" value="Reset">
-        <input class="random-button" type="button" name="random-button" value="Random">
-        <input class="submit-button" type="button" name="submit-button" value="Submit">
-        
-    </form>
-    <div>
-        <div class="slidevointainer">
-            <input type="range" min="0" max="9999999999" value="8888888888" class="slider" id="myRange">
-            <input class="slider-submit-button" type="button" name="submit-button" value="Submit">
-            <p class="slider-output"></p>
+
+    <div class="container">
+        <p>You Must Enter the Captcha Before You Can Submit (Press Change To Generate First Captcha)</p>
+        <p id="tracker">Captcha:</p>
+        <div id="captcha" class="captcha"></div>
+        <div class="restart">
+          <a href="#" onclick="createCaptcha()">Change</a>
         </div>
+        <div class="input">
+          <input type="text" name="reCaptcha" id="reCaptcha" placeholder="Type The Captcha"/>
+        </div>
+        <input type="button" value="Check Captcha" onclick="validateCaptcha()"/>
+        <input class="submit-button" type="button" class="putIn" name="submit-button" value="Submit Number">
+        <div id="errCaptcha" class="errmsg"></div>
     </div>
+
 </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Captcha Generator</title>
+    <link rel="stylesheet" href="../css/wa12.css" />
+    <script src="../js/wa12.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="captcha" class="captcha"></div>
+      <div class="restart">
+        <a href="#" onclick="createCaptcha()">Change</a>
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          name="reCaptcha"
+          id="reCaptcha"
+          placeholder="Type The Captcha"
+        />
+      </div>
+      <input type="button" value="Submit" onclick="validateCaptcha()" />
+      <div id="errCaptcha" class="errmsg"></div>
+    </div>
+  </body>
+</html> -->

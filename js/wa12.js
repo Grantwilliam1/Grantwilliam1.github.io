@@ -1,54 +1,46 @@
-function check() {
-    console.log('test');
-}
-
-function submit() {
-    alert(output.textContent);
-}
-
-function reset() {
-    outputInt = 0;
-    output.textContent = outputInt;
-}
-
-function minus() {
-    if (outputInt > 0){
-        outputInt -=1;
-        output.textContent = outputInt;
-    }
-}
-
-function plus() {
-    if (outputInt < 9999999999){
-        outputInt +=1;
-        output.textContent = outputInt;
-    }
-}
-
-function random() {
-    outputInt = randomNumber(0, 9999999999);
-    output.textContent = outputInt;
-}
-
-function randomNumber(min, max){
-    const num = Math.floor(Math.random() * (max - min + 1)) + min;
-    return num;
-}
-
+let captcha = new Array();
+var x = 1;
 const output = document.querySelector('.output');
-let outputInt = parseInt(output.textContent);
-console.log(outputInt);
 
-const minusButton = document.querySelector('.minus-button').addEventListener('click', minus);
-const plusButton = document.querySelector('.plus-button').addEventListener('click', plus);
-const resetButton = document.querySelector('.reset-button').addEventListener('click', reset);
-const randomButton = document.querySelector('.random-button').addEventListener('click', random);
-const submitButton = document.querySelector('.submit-button').addEventListener('click', submit);
+function createCaptcha() {
+  const activeCaptcha = document.getElementById("captcha");
+  for (q = 0; q < 6; q++) {
+    if (q % 2 == 0) {
+      captcha[q] = String.fromCharCode(Math.floor(Math.random() * 26 + 65));
+    } else {
+      captcha[q] = Math.floor(Math.random() * 10 + 0);
+    }
+  }
+  theCaptcha = captcha.join("");
+  activeCaptcha.innerHTML = `${theCaptcha}`;
+}
 
-var slider = document.getElementById('myRange');
-var sliderSubmit = document.querySelector(".slider-submit-button").addEventListener('click', update);
-var sliderOutput = document.querySelector(".slider-output");
 
-function update() {
-    sliderOutput.textContent = slider.value;
+
+function validateCaptcha() {
+    const errCaptcha = document.getElementById("errCaptcha");
+    const reCaptcha = document.getElementById("reCaptcha");
+    recaptcha = reCaptcha.value;
+    let validateCaptcha = 0;
+    for (var z = 0; z < 6; z++) {
+      if (recaptcha.charAt(z) != captcha[z]) {
+        validateCaptcha++;
+      }
+    }
+    if (recaptcha == "") {
+      errCaptcha.innerHTML = "Re-Captcha must be filled";
+    } else if (validateCaptcha > 0 || recaptcha.length > 6) {
+      errCaptcha.innerHTML = "Wrong captcha";
+    } else {
+      x += 1;
+      document.getElementById('tracker').innerHTML = "Captcha: " + x + "/124";
+      createCaptcha;
+    }
+    if (x === 124) {
+      errCaptcha.innerHTML = "Done";
+      function submit() {
+        alert("You Have Sucessfully Inputed Your Number :D");
+      }
+      const submitButton = document.querySelector('.submit-button').addEventListener('click', submit);
+    }
 }
