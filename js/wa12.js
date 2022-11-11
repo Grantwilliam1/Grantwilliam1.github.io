@@ -36,7 +36,7 @@ function validateCaptcha() {
       document.getElementById('tracker').innerHTML = "Current Captcha: " + x + "/400";
       createCaptcha();
     }
-    if (x === 2) {
+    if (x === 400) {
       errCaptcha.innerHTML = "Done";
       function submit() {
         alert("You Have Sucessfully Inputed Your Number :D");
