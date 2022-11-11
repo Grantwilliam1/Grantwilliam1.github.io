@@ -15,7 +15,7 @@ function createCaptcha() {
   activeCaptcha.innerHTML = `${theCaptcha}`;
 }
 
-
+createCaptcha();
 
 function validateCaptcha() {
     const errCaptcha = document.getElementById("errCaptcha");
@@ -33,10 +33,10 @@ function validateCaptcha() {
       errCaptcha.innerHTML = "Wrong captcha";
     } else {
       x += 1;
-      document.getElementById('tracker').innerHTML = "Captcha: " + x + "/124";
-      createCaptcha;
+      document.getElementById('tracker').innerHTML = "Current Captcha: " + x + "/400";
+      createCaptcha();
     }
-    if (x === 124) {
+    if (x === 2) {
       errCaptcha.innerHTML = "Done";
       function submit() {
         alert("You Have Sucessfully Inputed Your Number :D");

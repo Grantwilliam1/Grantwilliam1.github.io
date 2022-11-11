@@ -10,13 +10,12 @@
     <script defer src="../js/wa12.js"></script>
 </head>
 <body>
-    <div>
+    <div class="container">
+      <div>
         <p>Please enter your phone number. </p>
         <input type="text" name="number" id="number" class="text" placeholder="Enter your phone number"/>
-    </div>
-
-    <div class="container">
-        <p>You Must Enter the Captcha Before You Can Submit (Press Change To Generate First Captcha)</p>
+      </div>
+        <p>You Must Enter the Captcha Before You Can Submit</p>
         <p id="tracker">Captcha:</p>
         <div id="captcha" class="captcha"></div>
         <div class="restart">
@@ -25,8 +24,8 @@
         <div class="input">
           <input type="text" name="reCaptcha" id="reCaptcha" placeholder="Type The Captcha"/>
         </div>
-        <input type="button" value="Check Captcha" onclick="validateCaptcha()"/>
-        <input class="submit-button" type="button" class="putIn" name="submit-button" value="Submit Number">
+        <input class='button' type="button" value="Check Captcha" onclick="validateCaptcha()"/>
+        <input class='button' type="button" class="submit-button" value="Submit Number">
         <div id="errCaptcha" class="errmsg"></div>
     </div>
 
