@@ -13,6 +13,18 @@ const aliceTumbling = [
   const alice2 = document.querySelector("#alice2");
   const alice3 = document.querySelector("#alice3");
 
+  function aniated() {
+    alice1.animate(aliceTumbling, aliceTiming) => alice2.animate(aliceTumbling, aliceTiming).finished => alice3.animate(aliceTumbling, aliceTiming).finished;
+  }
+
   alice1.animate(aliceTumbling, aliceTiming).finished
   .then(() => alice2.animate(aliceTumbling, aliceTiming).finished)
   .then(() => alice3.animate(aliceTumbling, aliceTiming).finished)
+
+//   async function alice() {
+//     await alice1.animate(aliceTumbling, aliceTiming).finished
+//     await alice2.animate(aliceTumbling, aliceTiming).finished
+//     alice3.animate(aliceTumbling, aliceTiming).finished
+//   }
+
+//   alice();
