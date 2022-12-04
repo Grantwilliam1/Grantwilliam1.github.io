@@ -35,6 +35,13 @@ p {
     padding: 10px;
 }
 
+a {
+    font-size: 10pt;
+    font-weight: lighter;
+    color: #878e88;
+    padding: 10px;
+}
+
 li{
     font-size: 15pt;
     font-weight: lighter;
@@ -91,7 +98,6 @@ img {
     align-self: center;
     height: 80%;
 }
-
 .card{
     float: center;
 }
@@ -123,6 +129,11 @@ img {
         border: 0.5em solid #D4DFC7;
         border-radius: .5em;
     }
+    .top-grid {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+
+    }
     .feature{
         display: block;
         margin-left: auto;
@@ -136,6 +147,12 @@ img {
         margin-right: auto;
         max-width: 100%;
         min-width: 75%;
+    }
+    .feature3{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
     }
   }
 @media only screen and (max-width: 1000px) {
@@ -165,6 +182,15 @@ img {
         border: 0.5em solid #D4DFC7;
         border-radius: .5em;
     }
+    .top-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        float: right;
+        gap: 5px;
+        height: 80%;
+        margin: auto;
+
+    }
     .feature{
         display: block;
         margin-left: auto;
@@ -181,6 +207,14 @@ img {
         max-width: 75%;
         min-width: 50%;
     }   
+    .feature3{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 150px;
+    }
 }
 
 /* *Gasp* DONKEY KONG!?!?!?!?!?!?! */
